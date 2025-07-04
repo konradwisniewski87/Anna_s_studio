@@ -1,39 +1,43 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Anna_s_studio</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+﻿@inject I18nService I18n
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">Studio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="/">@I18n.T("Home")</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">@I18n.T("Services")</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">@I18n.T("Gallery")</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">@I18n.T("Contact")</a></li>
+            </ul>
+            <div class="d-flex">
+                <button class="btn btn-sm btn-outline-secondary me-1" @onclick="@(() => ChangeLang("pl"))">
+                    🇵🇱
+                </button>
+                <button class="btn btn-sm btn-outline-secondary" @onclick="@(() => ChangeLang("en"))">
+                    🇬🇧
+                </button>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
+</nav>
 
 @code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    void ChangeLang(string lang)
     {
-        collapseNavMenu = !collapseNavMenu;
+        I18n.SetLanguage(lang);
+    }
+
+    protected override void OnInitialized()
+    {
+        I18n.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        I18n.OnChange -= StateHasChanged;
     }
 }
