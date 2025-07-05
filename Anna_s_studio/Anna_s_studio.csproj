@@ -15,4 +15,9 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <StaticWebAssetBasePath>Anna_s_studio</StaticWebAssetBasePath>
+  </PropertyGroup>
+
 </Project>
