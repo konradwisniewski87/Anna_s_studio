@@ -4,8 +4,9 @@ namespace Anna_s_studio.Services;
 
 public class I18nService
 {
-    public event Action OnChange;
-    private Dictionary<string, Dictionary<string, string>> _translations;
+    public event Action? OnChange;
+    private Dictionary<string, Dictionary<string, string>> _translations = new();
+
     public string CurrentLanguage { get; private set; } = "pl";
 
     public async Task LoadAsync(HttpClient http)
