@@ -4,10 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <!--
     <StaticWebAssetBasePath>Anna_s_studio</StaticWebAssetBasePath>
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
-    -->
   </PropertyGroup>
 
   <ItemGroup>
