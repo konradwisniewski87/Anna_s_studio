@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Anna_s_studio",
   "resources": {
-    "hash": "sha256-sQ6b18ZEcw7gW/u5PgQfKqpDTCsnoXiHpYDc+7KuZZM=",
+    "hash": "sha256-PlrNf5dt308TWoDGFlY+Z5sCCfb45kjOmArouGrOpak=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.kzdmicmpuc.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.oaiuvga83b.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -36,7 +36,7 @@
       "System.Text.RegularExpressions.3zydt3n8n9.wasm": "System.Text.RegularExpressions.wasm",
       "System.Threading.zcb42vnja5.wasm": "System.Threading.wasm",
       "System.Private.CoreLib.s55nloggb5.wasm": "System.Private.CoreLib.wasm",
-      "Anna_s_studio.5zpat0kyvn.wasm": "Anna_s_studio.wasm",
+      "Anna_s_studio.2gyze75vk8.wasm": "Anna_s_studio.wasm",
       "dotnet.native.ffj4va6u6z.js": "dotnet.native.js",
       "dotnet.native.3ub1qziy1t.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -91,7 +91,7 @@
       "System.Text.Json.u93pa0l0y4.wasm": "sha256-0nbwSDJN6TofCR7dRVJthNFoOU5NdBoyzFtHdVa6lXs=",
       "System.Text.RegularExpressions.3zydt3n8n9.wasm": "sha256-sXTH9c57ccmOHrE+Bpsiewg0xWGtHrbl8KBKpTJW9VA=",
       "System.Threading.zcb42vnja5.wasm": "sha256-fZ9o2IQTIELEttSIeZ1yev0uL+0qIYnwOC1p/5RM/0k=",
-      "Anna_s_studio.5zpat0kyvn.wasm": "sha256-AZ8LhEkvugsti3uD0Q5e2ltaKCQI+1KGx2Ok+xaNt6M="
+      "Anna_s_studio.2gyze75vk8.wasm": "sha256-IvOTS/p/ZEZXR7Cmdhkogv4cIQsYYnebedwoDYJmk1o="
     }
   },
   "cacheBootResources": true,
