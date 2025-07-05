@@ -1,4 +1,4 @@
-﻿@inject I18nService I18n
+﻿@* @inject I18nService I18n
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -13,14 +13,6 @@
                 <li class="nav-item"><a class="nav-link" href="#gallery">@I18n.T("Gallery")</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">@I18n.T("Contact")</a></li>
             </ul>
-            <div class="d-flex">
-                <button class="btn btn-sm btn-outline-secondary me-1" @onclick="@(() => ChangeLang("pl"))">
-                    🇵🇱
-                </button>
-                <button class="btn btn-sm btn-outline-secondary" @onclick="@(() => ChangeLang("en"))">
-                    🇬🇧
-                </button>
-            </div>
         </div>
     </div>
 </nav>
@@ -40,4 +32,4 @@
     {
         I18n.OnChange -= StateHasChanged;
     }
-}
+} *@

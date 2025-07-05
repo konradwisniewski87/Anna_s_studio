@@ -112,3 +112,46 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+    background: #ffffffee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+}
+
+    .nav-link:hover {
+        color: #a7727d !important;
+    }
+
+.btn-outline-secondary {
+    border-color: #a7727d;
+    color: #a7727d;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #a7727d;
+        color: #fff;
+    }
+
+.sidebar {
+    background: linear-gradient(180deg, #a7727d, #f8e1e7);
+}

@@ -1,16 +1,73 @@
-﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+﻿@inject I18nService I18n
+@inherits LayoutComponentBase
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">Studio</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">@I18n.T("Home")</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">@I18n.T("Services")</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">@I18n.T("Gallery")</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">@I18n.T("Contact")</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">@I18n.T("About")</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-sm btn-outline-secondary ms-2" @onclick="ChangeLang">
+                        @if (I18n.CurrentLanguage == "pl")
+                        {
+                            <span>🇬🇧</span>
+                        }
+                        else
+                        {
+                            <span>🇵🇱</span>
+                        }
+                    </button>
+                </li>
+            </ul>
         </div>
+    </div>
+</nav>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<main>
+    <article class="content px-4">
+        @Body
+    </article>
+</main>
+
+@code {
+    void ChangeLang()
+    {
+        if (I18n.CurrentLanguage == "pl")
+            I18n.SetLanguage("en");
+        else
+            I18n.SetLanguage("pl");
+    }
+
+    protected override void OnInitialized()
+    {
+        I18n.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        I18n.OnChange -= StateHasChanged;
+    }
+}

@@ -4,13 +4,15 @@
     "Services": "Usługi",
     "Gallery": "Galeria",
     "Contact": "Kontakt",
-    "WelcomeMessage": "Witamy w Studio Urody"
+    "WelcomeMessage": "Witamy w Studio Urody",
+    "About": "O nas"
   },
   "en": {
     "Home": "Home",
     "Services": "Services",
     "Gallery": "Gallery",
     "Contact": "Contact",
-    "WelcomeMessage": "Welcome to Beauty Studio"
+    "WelcomeMessage": "Welcome to Beauty Studio",
+    "About": "About"
   }
 }
