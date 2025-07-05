@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Anna_s_studio",
   "resources": {
-    "hash": "sha256-hZ6zlp1EQpj/l3RVC086+DhaRvnSaPMOa3MzAzTQu5E=",
+    "hash": "sha256-sQ6b18ZEcw7gW/u5PgQfKqpDTCsnoXiHpYDc+7KuZZM=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.kzdmicmpuc.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.oaiuvga83b.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -36,14 +36,12 @@
       "System.Text.RegularExpressions.3zydt3n8n9.wasm": "System.Text.RegularExpressions.wasm",
       "System.Threading.zcb42vnja5.wasm": "System.Threading.wasm",
       "System.Private.CoreLib.s55nloggb5.wasm": "System.Private.CoreLib.wasm",
-      "Anna_s_studio.wyflwn2o10.wasm": "Anna_s_studio.wasm",
+      "Anna_s_studio.5zpat0kyvn.wasm": "Anna_s_studio.wasm",
       "dotnet.native.ffj4va6u6z.js": "dotnet.native.js",
       "dotnet.native.3ub1qziy1t.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.runtime.d1pzlaz2ez.js": "dotnet.runtime.js",
-      "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
-      "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
-      "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat"
+      "icudt.oh1zvcfom8.dat": "icudt.dat"
     },
     "jsModuleNative": {
       "dotnet.native.ffj4va6u6z.js": "sha256-pf2P11GPrPDRMygks46BPb4T9E0RA0y6N7Sb3NBSRvg="
@@ -55,9 +53,7 @@
       "dotnet.native.3ub1qziy1t.wasm": "sha256-K1h4zBjEghZ5Od2/sNgY53GTZO3wjCxj+E+WgrT0/Zw="
     },
     "icu": {
-      "icudt_CJK.tjcz0u77k5.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
-      "icudt_EFIGS.tptq2av103.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
-      "icudt_no_CJK.lfu7j35m59.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
+      "icudt.oh1zvcfom8.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
     },
     "coreAssembly": {
       "System.Runtime.InteropServices.JavaScript.4wymnd9fjf.wasm": "sha256-3IoLyXDPZlSSNuf0cCFYH/6pnHsiIz+bg/ptKuGnMiI=",
@@ -95,13 +91,13 @@
       "System.Text.Json.u93pa0l0y4.wasm": "sha256-0nbwSDJN6TofCR7dRVJthNFoOU5NdBoyzFtHdVa6lXs=",
       "System.Text.RegularExpressions.3zydt3n8n9.wasm": "sha256-sXTH9c57ccmOHrE+Bpsiewg0xWGtHrbl8KBKpTJW9VA=",
       "System.Threading.zcb42vnja5.wasm": "sha256-fZ9o2IQTIELEttSIeZ1yev0uL+0qIYnwOC1p/5RM/0k=",
-      "Anna_s_studio.wyflwn2o10.wasm": "sha256-6L9CB2bK+K+H84E0SnGN+FOjPHA5B/pqJ7AV5QLeYuM="
+      "Anna_s_studio.5zpat0kyvn.wasm": "sha256-AZ8LhEkvugsti3uD0Q5e2ltaKCQI+1KGx2Ok+xaNt6M="
     }
   },
   "cacheBootResources": true,
   "debugLevel": 0,
   "linkerEnabled": true,
-  "globalizationMode": "sharded",
+  "globalizationMode": "all",
   "extensions": {
     "blazor": {}
   }
