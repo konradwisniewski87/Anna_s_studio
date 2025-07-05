@@ -1,9 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StaticWebAssetBasePath>Anna_s_studio</StaticWebAssetBasePath>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,10 +16,4 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <StaticWebAssetBasePath>Anna_s_studio</StaticWebAssetBasePath>
-  </PropertyGroup>
-
 </Project>
