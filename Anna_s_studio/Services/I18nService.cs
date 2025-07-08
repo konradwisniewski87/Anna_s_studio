@@ -8,11 +8,14 @@ public class I18nService
     private Dictionary<string, Dictionary<string, string>> _translations = new();
 
     public string CurrentLanguage { get; private set; } = "pl";
+    public bool IsLoaded { get; private set; } = false;
 
     public async Task LoadAsync(HttpClient http)
     {
         var json = await http.GetStringAsync("i18n.json");
         _translations = JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(json)!;
+        IsLoaded = true;
+        OnChange?.Invoke();
     }
 
     public void SetLanguage(string lang)

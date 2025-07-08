@@ -1,17 +1,23 @@
 ﻿@inject I18nService I18n
 @inject HttpClient Http
 
-<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-    </Found>
-    <NotFound>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p>Sorry, page not found.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
-
+@if (!I18n.IsLoaded)
+{
+    <LoadingSpinner />
+}
+else
+{
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        </Found>
+        <NotFound>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p>Sorry, page not found.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+}
 @code {
     protected override async Task OnInitializedAsync()
     {
