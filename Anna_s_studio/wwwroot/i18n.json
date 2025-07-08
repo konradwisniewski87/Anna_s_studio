@@ -5,7 +5,16 @@
     "Gallery": "Galeria",
     "Contact": "Kontakt",
     "WelcomeMessage": "Witamy w Studio Urody",
-    "About": "O nas"
+    "About": "O nas",
+    "MainTitle": "Kameralne Studio,<br/>w którym zadbamy o Twój indywidualny styl, zdrowie i samopoczucie",
+    "MainSubtitle": "Razem stworzymy wyjątkową wersję Ciebie.",
+    "BookNow": "ZAREZERWUJ WIZYTĘ",
+    "ContactTitle": "Kontakt",
+    "ContactDescription": "Zapraszamy do kontaktu i umówienia wizyty.",
+    "Phone": "Telefon",
+    "Address": "Adres",
+    "Email": "E-mail",
+    "ShowOnMap": "Pokaż na mapie"
   },
   "en": {
     "Home": "Home",
@@ -13,6 +22,15 @@
     "Gallery": "Gallery",
     "Contact": "Contact",
     "WelcomeMessage": "Welcome to Beauty Studio",
-    "About": "About"
+    "About": "About",
+    "MainTitle": "A Cozy Studio,<br/>where we care for your individual style, health, and well-being",
+    "MainSubtitle": "Together, we'll create your unique version.",
+    "BookNow": "BOOK AN APPOINTMENT",
+    "ContactTitle": "Contact",
+    "ContactDescription": "Feel free to contact us and book your appointment.",
+    "Phone": "Phone",
+    "Address": "Address",
+    "Email": "E-mail",
+    "ShowOnMap": "Show on map"
   }
 }
