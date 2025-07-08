@@ -327,3 +327,13 @@ body {
         min-height: 40vh;
     }
 }
+
+.social-link svg {
+    vertical-align: middle;
+    transition: color 0.2s;
+}
+
+.social-link:hover svg {
+    color: #a7727d;
+    filter: drop-shadow(0 2px 8px #a7727d22);
+}
