@@ -17,7 +17,9 @@
     "ShowOnMap": "Pokaż na mapie",
     "Service": "Usługa",
     "Price": "Cena",
-    "OurServices": "Nasze usługi"
+    "OurServices": "Nasze usługi",
+    "GalleryInviteTitle": "Zobacz nasze prace na Instagramie!",
+    "GalleryInviteText": "Obserwuj nas i sprawdź najnowsze metamorfozy oraz efekty."
   },
   "en": {
     "Home": "Home",
@@ -37,6 +39,8 @@
     "ShowOnMap": "Show on map",
     "Service": "Service",
     "Price": "Price",
-    "OurServices": "Our Services"
+    "OurServices": "Our Services",
+    "GalleryInviteTitle": "See our work on Instagram!",
+    "GalleryInviteText": "Follow us and see the latest effects and transformations."
   }
 }

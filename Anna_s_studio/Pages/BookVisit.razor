@@ -1,5 +1,6 @@
 ﻿@page "/book"
-
+@inherits LayoutComponentBase
+@inject I18nService I18n
 @inject VisitBookingService BookingService
 
 <h3>Umów wizytę</h3>
@@ -44,5 +45,15 @@
 
         GoogleCalendarLink = BookingService.GetGoogleCalendarUrl(start, end, "Wizyta w Anna's Studio", "Studio Urody", "Umówiona wizyta");
         ExternalCalendarLink = BookingService.GetIcsCalendarUrl(start, end, "Wizyta w Anna's Studio", "Studio Urody", "Umówiona wizyta");
+    }
+
+    protected override void OnInitialized()
+    {
+        I18n.OnChange += StateHasChanged;
+    }
+
+    protected void Dispose()
+    {
+        I18n.OnChange -= StateHasChanged;
     }
 }
