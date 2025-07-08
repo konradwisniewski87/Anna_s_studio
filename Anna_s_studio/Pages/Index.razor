@@ -2,11 +2,16 @@
 @inherits LayoutComponentBase
 @inject I18nService I18n
 
-<div class="main-banner">
-    <img src="images/Inside.jpg" alt="Wnętrze salonu" class="main-photo" />
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>@((MarkupString)I18n.T("MainTitle"))</h1>
+        <p>@I18n.T("MainSubtitle")</p>
+        <NavLink href="/book" class="btn btn-primary mt-3">
+            @I18n.T("BookNow")
+        </NavLink>
+    </div>
 </div>
-
-<h1>@I18n.T("WelcomeMessage")</h1>
 
 @code {
     protected override void OnInitialized()
