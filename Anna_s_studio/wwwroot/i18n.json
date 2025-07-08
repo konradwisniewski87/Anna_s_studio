@@ -14,7 +14,10 @@
     "Phone": "Telefon",
     "Address": "Adres",
     "Email": "E-mail",
-    "ShowOnMap": "Pokaż na mapie"
+    "ShowOnMap": "Pokaż na mapie",
+    "Service": "Usługa",
+    "Price": "Cena",
+    "OurServices": "Nasze usługi"
   },
   "en": {
     "Home": "Home",
@@ -31,6 +34,9 @@
     "Phone": "Phone",
     "Address": "Address",
     "Email": "E-mail",
-    "ShowOnMap": "Show on map"
+    "ShowOnMap": "Show on map",
+    "Service": "Service",
+    "Price": "Price",
+    "OurServices": "Our Services"
   }
 }
