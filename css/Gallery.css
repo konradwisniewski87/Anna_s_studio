@@ -1,0 +1,19 @@
+﻿.gallery-invite h2 {
+    font-family: 'Playfair Display', serif;
+    color: #a7727d;
+    font-weight: 700;
+}
+
+.insta-link svg {
+    transition: transform 0.18s;
+}
+
+.insta-link:hover svg {
+    transform: scale(1.09) rotate(-5deg);
+}
+
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,42 @@
+﻿.services-section {
+    background: #fff9f3;
+    border-radius: 1.5rem;
+    padding: 2.5rem 1rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 24px #a7727d1c;
+}
+
+.services-title {
+    font-family: 'Playfair Display', serif;
+    color: #a7727d;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.services-table {
+    background: #fff;
+    border-radius: 0.7rem;
+    overflow: hidden;
+}
+
+    .services-table thead {
+        background: #f6ece3;
+        color: #a7727d;
+        font-weight: bold;
+    }
+
+    .services-table td, .services-table th {
+        vertical-align: middle;
+    }
+
+@media (max-width: 600px) {
+    .services-section {
+        padding: 1.2rem 0.3rem;
+    }
+
+    .services-table th, .services-table td {
+        font-size: 0.97rem;
+    }
+}
