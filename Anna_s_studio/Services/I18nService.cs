@@ -7,7 +7,7 @@ public class I18nService
     public event Action? OnChange;
     private Dictionary<string, Dictionary<string, string>> _translations = new();
 
-    public string CurrentLanguage { get; private set; } = "pl";
+    public string CurrentLanguage { get; private set; } = "en";
     public bool IsLoaded { get; private set; } = false;
 
     public async Task LoadAsync(HttpClient http)
