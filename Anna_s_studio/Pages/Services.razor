@@ -1,49 +1,44 @@
 ﻿@page "/services"
+@inherits LayoutComponentBase
 @inject I18nService I18n
+@inject NavigationManager NavigationManager
+@using Anna_s_studio.Services
 
-<div class="services-section">
-    <h2 class="services-title mb-4">@I18n.T("OurServices")</h2>
-    <div class="table-responsive">
-        <table class="table table-hover services-table align-middle">
-            <thead>
-                <tr>
-                    <th scope="col">@I18n.T("Service")</th>
-                    <th scope="col">@I18n.T("Price")</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>❤️ Master Kobido Up – Face Massage</td>
-                    <td>£80</td>
-                </tr>
-                <tr>
-                    <td>💛 Kobido BODY</td>
-                    <td>£65</td>
-                </tr>
-                <tr>
-                    <td>💚 TransBuccal massage</td>
-                    <td>£65</td>
-                </tr>
-                <tr>
-                    <td>🩷 Aesthetic kinesiology taping</td>
-                    <td>£45</td>
-                </tr>
-                <tr>
-                    <td>
-                        💜 Facial Acupuncture:
-                        <ul class="mb-0">
-                            <li>Pinning</li>
-                            <li>100 Points of Youth</li>
-                            <li>Enterodermal Acupuncture</li>
-                        </ul>
-                    </td>
-                    <td>£55</td>
-                </tr>
-                <tr>
-                    <td>💙 Deep tissue massage</td>
-                    <td>£65</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="services-list">
+    @foreach (var service in ServicesList)
+    {
+        <button class="service-btn-horizontal" @onclick="() => Book(service)">
+            <span class="service-emoji">@service.Emoji</span>
+            <span class="service-name">@I18n.T(service.Name)</span>
+            <span class="service-duration">@service.Duration @I18n.T("min")</span>
+            <span class="service-price">@service.Price</span>
+        </button>
+    }
 </div>
+
+@code {
+    List<Service> ServicesList = new()
+    {
+        new Service { Emoji = "❤️", Name = "MasterKobidoUp", Duration = 60, Price = "£60" },
+        new Service { Emoji = "💛", Name = "KobidoBody", Duration = 70, Price = "£70" },
+        new Service { Emoji = "💚", Name = "TransBuccal", Duration = 60, Price = "£65" },
+        new Service { Emoji = "🩷", Name = "AestheticKinesiologyTaping", Duration = 30, Price = "£30" },
+        new Service { Emoji = "💜", Name = "FacialAcupuncture", Duration = 60, Price = "£70" },
+        new Service { Emoji = "💙", Name = "DeepTissueMassage", Duration = 60, Price = "£70" }
+    };
+
+    void Book(Service service)
+    {
+        NavigationManager.NavigateTo("/bookvisit");
+    }
+
+    protected override void OnInitialized()
+    {
+        I18n.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        I18n.OnChange -= StateHasChanged;
+    }
+}
