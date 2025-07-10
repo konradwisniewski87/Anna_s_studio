@@ -19,7 +19,15 @@
     "Price": "Cena",
     "OurServices": "Nasze usługi",
     "GalleryInviteTitle": "Zobacz nasze prace na Instagramie!",
-    "GalleryInviteText": "Obserwuj nas i sprawdź najnowsze metamorfozy oraz efekty."
+    "GalleryInviteText": "Obserwuj nas i sprawdź najnowsze metamorfozy oraz efekty.",
+    "min": "min",
+    "price": "Cena",
+    "MasterKobidoUp": "Master Kobido Up - Masaż Twarzy",
+    "KobidoBody": "Kobido BODY",
+    "TransBuccal": "Masaż TransBuccal",
+    "AestheticKinesiologyTaping": "Estetyczny taping kinezjologiczny",
+    "FacialAcupuncture": "Akupunktura twarzy: Pinning, 100 Punktów Młodości, Enterodermalna Akupunktura",
+    "DeepTissueMassage": "Masaż tkanek głębokich"
   },
   "en": {
     "Home": "Home",
@@ -41,6 +49,14 @@
     "Price": "Price",
     "OurServices": "Our Services",
     "GalleryInviteTitle": "See our work on Instagram!",
-    "GalleryInviteText": "Follow us and see the latest effects and transformations."
+    "GalleryInviteText": "Follow us and see the latest effects and transformations.",
+    "min": "min",
+    "price": "Price",
+    "MasterKobidoUp": "Master Kobido Up - Face Massage",
+    "KobidoBody": "Kobido BODY",
+    "TransBuccal": "TransBuccal massage",
+    "AestheticKinesiologyTaping": "Aesthetic kinesiology taping",
+    "FacialAcupuncture": "Facial Acupuncture: Pinning, 100 Points of Youth, Enterodermal Acupuncture",
+    "DeepTissueMassage": "Deep tissue massage"
   }
 }

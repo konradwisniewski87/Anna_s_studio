@@ -1,42 +1,156 @@
-﻿.services-section {
-    background: #fff9f3;
-    border-radius: 1.5rem;
-    padding: 2.5rem 1rem;
-    max-width: 700px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 24px #a7727d1c;
+﻿.services-list {
+    /* max-width: 650px; */
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-.services-title {
-    font-family: 'Playfair Display', serif;
-    color: #a7727d;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 1px;
+.service-link-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 8px;
 }
 
-.services-table {
-    background: #fff;
-    border-radius: 0.7rem;
+.service-emoji {
+    font-size: 2.2rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.service-title {
+    font-size: 1.19rem;
+    font-weight: 500;
+    color: inherit;
+    margin-right: 10px;
+}
+
+.service-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #7d746b;
+    font-size: 1rem;
+}
+
+.service-dot {
+    font-size: 1.4em;
+    color: #cabfae;
+}
+
+.service-menu {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, opacity 0.2s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+    .service-menu:hover {
+        background: rgba(255,255,255,0.12);
+        opacity: 1;
+    }
+
+.service-btn-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1.1rem 2.2rem;
+    margin: 1.2rem 0;
+    background: linear-gradient(90deg, #f8f6f2 0%, #f3e9e0 100%);
+    border: none;
+    border-radius: 2.5rem;
+    box-shadow: 0 2px 16px 0 rgba(200, 180, 160, 0.10);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #5a4d3b;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background 0.2s, transform 0.1s;
+}
+
+.service-btn-horizontal:hover, .service-btn-horizontal:focus {
+    background: linear-gradient(90deg, #f3e9e0 0%, #f8f6f2 100%);
+    box-shadow: 0 4px 24px 0 rgba(200, 180, 160, 0.18);
+    transform: translateY(-2px) scale(1.02);
+    outline: none;
+}
+
+.service-btn-horizontal .service-emoji {
+    font-size: 2.1rem;
+    margin-right: 1.2rem;
+}
+
+.service-btn-horizontal .service-name {
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: #7d746b;
+    margin-right: 1.2rem;
+    flex: 1 1 200px;
+    text-align: left;
+    min-width: 0;
     overflow: hidden;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    line-height: 1.2;
+    max-height: 2.6em;
 }
 
-    .services-table thead {
-        background: #f6ece3;
-        color: #a7727d;
-        font-weight: bold;
-    }
+.service-btn-horizontal .service-duration,
+.service-btn-horizontal .service-price {
+    font-size: 1.05rem;
+    color: #b6a89a;
+    margin-right: 0.8rem;
+    min-width: 60px;
+    text-align: right;
+}
 
-    .services-table td, .services-table th {
-        vertical-align: middle;
-    }
+.service-btn-horizontal .service-price {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #a67c52;
+    margin-right: 0;
+    min-width: 80px;
+}
 
+/* Responsive hiding for duration and price */
 @media (max-width: 600px) {
-    .services-section {
-        padding: 1.2rem 0.3rem;
+    .service-btn-horizontal .service-duration {
+        display: none;
     }
+}
 
-    .services-table th, .services-table td {
-        font-size: 0.97rem;
+@media (max-width: 440px) {
+    .service-btn-horizontal .service-price {
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    .service-btn-horizontal .service-name {
+        max-width: 60px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        max-height: unset;
     }
 }
