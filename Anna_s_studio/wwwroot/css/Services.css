@@ -57,10 +57,10 @@
     cursor: pointer;
 }
 
-    .service-menu:hover {
-        background: rgba(255,255,255,0.12);
-        opacity: 1;
-    }
+.service-menu:hover {
+    background: rgba(255,255,255,0.12);
+    opacity: 1;
+}
 
 .service-btn-horizontal {
     display: flex;

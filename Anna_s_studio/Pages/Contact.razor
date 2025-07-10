@@ -1,6 +1,7 @@
 ﻿@page "/contact"
 @inherits LayoutComponentBase
 @inject I18nService I18n
+@implements IDisposable
 
 <div class="contact-hero">
     <div class="contact-overlay"></div>
@@ -44,7 +45,7 @@
 		I18n.OnChange += StateHasChanged;
     }
 
-    protected void Dispose()
+    public void Dispose()
     {
         I18n.OnChange -= StateHasChanged;
 	}

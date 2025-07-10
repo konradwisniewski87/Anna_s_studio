@@ -3,6 +3,7 @@
 @inject I18nService I18n
 @inject NavigationManager NavigationManager
 @using Anna_s_studio.Services
+@implements IDisposable
 
 <div class="services-list">
     @foreach (var service in ServicesList)

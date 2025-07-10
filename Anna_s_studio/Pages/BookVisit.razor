@@ -2,6 +2,7 @@
 @inherits LayoutComponentBase
 @inject I18nService I18n
 @inject VisitBookingService BookingService
+@implements IDisposable
 
 <h3>Umów wizytę</h3>
 <div>
@@ -52,7 +53,7 @@
         I18n.OnChange += StateHasChanged;
     }
 
-    protected void Dispose()
+    public void Dispose()
     {
         I18n.OnChange -= StateHasChanged;
     }
