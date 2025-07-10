@@ -1,60 +1,116 @@
-﻿@page "/book"
+﻿@page "/bookvisit"
 @inherits LayoutComponentBase
 @inject I18nService I18n
 @inject VisitBookingService BookingService
+@inject NavigationManager NavigationManager
 @implements IDisposable
 
-<h3>Umów wizytę</h3>
-<div>
-    <label>Wybierz datę:</label>
-    <InputDate @bind-Value="SelectedDate" />
-</div>
-<div>
-    <label>Wybierz godzinę:</label>
-    <select @bind="SelectedHour">
-        @for (int hour = 9; hour < 15; hour++)
-        {
-            <option value="@hour">@hour:00 - @(hour + 1):00</option>
-        }
-    </select>
-</div>
-<button @onclick="GenerateBookingLinks" class="btn btn-primary mt-2">Rezerwuj wizytę</button>
-
-@if (!string.IsNullOrEmpty(GoogleCalendarLink))
+<h3>@I18n.T("BookVisit")</h3>
+@if (!string.IsNullOrEmpty(ServiceName))
 {
-    <div class="mt-3">
-        <a href="@GoogleCalendarLink" target="_blank" class="btn btn-outline-success">Dodaj do swojego Google Kalendarza</a>
+    <div class="mb-3">
+        <strong>@I18n.T("Service"):</strong> @I18n.T(ServiceName)
+        <br />
+        <strong>@I18n.T("Duration"):</strong> @Duration @I18n.T("min")
+        <br />
+        <strong>@I18n.T("Price"):</strong> @Price
     </div>
+    <div class="mb-3">
+        <label>@I18n.T("SelectDate")</label>
+        <InputDate @bind-Value="SelectedDate" class="form-control d-inline-block w-auto" />
+    </div>
+    @if (SelectedDate != default)
+    {
+        <div class="mb-3">
+            <label>@I18n.T("SelectTimeSlot")</label>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+                @foreach (var slot in AvailableSlots)
+                {
+                    <button class="btn btn-outline-primary" @onclick="() => SelectSlot(slot)" disabled="@(SelectedSlot == slot)">@slot.ToString("HH:mm")</button>
+                }
+            </div>
+        </div>
+    }
+    @if (SelectedSlot != null)
+    {
+        <div class="alert alert-success mt-3">
+            <strong>@I18n.T("Summary")</strong><br />
+            @I18n.T(ServiceName), @Duration @I18n.T("min"), @Price<br />
+            @I18n.T("Date"): @SelectedDate.ToShortDateString()<br />
+            @I18n.T("Time"): @SelectedSlot?.ToString("HH:mm")
+        </div>
+        <a href="@GoogleCalendarLink" target="_blank" class="btn btn-success mt-2">@I18n.T("AddToGoogleCalendar")</a>
+    }
 }
-@if (!string.IsNullOrEmpty(ExternalCalendarLink))
+else
 {
-    <div class="mt-2">
-        <a href="@ExternalCalendarLink" target="_blank" class="btn btn-outline-secondary">Dodaj do innego kalendarza (ICS)</a>
-    </div>
+    <div class="alert alert-warning">@I18n.T("NoServiceSelected")</div>
 }
 
 @code {
+    // Service details from query string
+    private string ServiceName { get; set; }
+    private int Duration { get; set; }
+    private string Price { get; set; }
+
+    // Booking state
     private DateTime SelectedDate { get; set; } = DateTime.Today;
-    private int SelectedHour { get; set; } = 9;
+    private List<DateTime> AvailableSlots { get; set; } = new();
+    private DateTime? SelectedSlot { get; set; }
     private string GoogleCalendarLink { get; set; }
-    private string ExternalCalendarLink { get; set; }
-
-    private void GenerateBookingLinks()
-    {
-        var start = SelectedDate.Date.AddHours(SelectedHour);
-        var end = start.AddHours(1);
-
-        GoogleCalendarLink = BookingService.GetGoogleCalendarUrl(start, end, "Wizyta w Anna's Studio", "Studio Urody", "Umówiona wizyta");
-        ExternalCalendarLink = BookingService.GetIcsCalendarUrl(start, end, "Wizyta w Anna's Studio", "Studio Urody", "Umówiona wizyta");
-    }
 
     protected override void OnInitialized()
     {
         I18n.OnChange += StateHasChanged;
+        ParseQuery();
+        GenerateSlots();
     }
 
     public void Dispose()
     {
         I18n.OnChange -= StateHasChanged;
+    }
+
+    // Parse query string for service details
+    private void ParseQuery()
+    {
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+        var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        ServiceName = query["service"] ?? string.Empty;
+        int.TryParse(query["duration"], out var duration);
+        Duration = duration > 0 ? duration : 60;
+        Price = query["price"] ?? string.Empty;
+    }
+
+    // Generate available time slots for the selected date
+    private void GenerateSlots()
+    {
+        AvailableSlots.Clear();
+        var workStart = new DateTime(SelectedDate.Year, SelectedDate.Month, SelectedDate.Day, 9, 0, 0);
+        var workEnd = new DateTime(SelectedDate.Year, SelectedDate.Month, SelectedDate.Day, 17, 0, 0);
+        var slot = workStart;
+        while (slot.AddMinutes(Duration) <= workEnd)
+        {
+            AvailableSlots.Add(slot);
+            slot = slot.AddMinutes(30); // 30-minute intervals
+        }
+        SelectedSlot = null;
+        GoogleCalendarLink = null;
+    }
+
+    // When date changes, regenerate slots
+    private void OnDateChanged(ChangeEventArgs e)
+    {
+        SelectedDate = (DateTime)e.Value;
+        GenerateSlots();
+    }
+
+    // When a slot is selected, generate Google Calendar link
+    private void SelectSlot(DateTime slot)
+    {
+        SelectedSlot = slot;
+        var start = slot;
+        var end = slot.AddMinutes(Duration);
+        GoogleCalendarLink = BookingService.GetGoogleCalendarUrl(start, end, I18n.T(ServiceName), "Anna's Studio", $"Service: {I18n.T(ServiceName)}\nPrice: {Price}");
     }
 }
