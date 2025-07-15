@@ -27,7 +27,16 @@
     "TransBuccal": "Masaż TransBuccal",
     "AestheticKinesiologyTaping": "Estetyczny taping kinezjologiczny",
     "FacialAcupuncture": "Akupunktura twarzy: Pinning, 100 Punktów Młodości, Enterodermalna Akupunktura",
-    "DeepTissueMassage": "Masaż tkanek głębokich"
+    "DeepTissueMassage": "Masaż tkanek głębokich",
+    "BookVisit": "Umów wizytę",
+    "SelectDate": "Wybierz datę:",
+    "SelectTimeSlot": "Wybierz godzinę:",
+    "Summary": "Podsumowanie:",
+    "AddToGoogleCalendar": "Dodaj do Google Kalendarza",
+    "NoServiceSelected": "Nie wybrano usługi. Wróć i wybierz usługę.",
+    "Duration": "Czas trwania",
+    "Date": "Data",
+    "Time": "Godzina"
   },
   "en": {
     "Home": "Home",
@@ -57,6 +66,15 @@
     "TransBuccal": "TransBuccal massage",
     "AestheticKinesiologyTaping": "Aesthetic kinesiology taping",
     "FacialAcupuncture": "Facial Acupuncture: Pinning, 100 Points of Youth, Enterodermal Acupuncture",
-    "DeepTissueMassage": "Deep tissue massage"
+    "DeepTissueMassage": "Deep tissue massage",
+    "BookVisit": "Book a Visit",
+    "SelectDate": "Select date:",
+    "SelectTimeSlot": "Select time slot:",
+    "Summary": "Summary:",
+    "AddToGoogleCalendar": "Add to Google Calendar",
+    "NoServiceSelected": "No service selected. Please go back and choose a service.",
+    "Duration": "Duration",
+    "Date": "Date",
+    "Time": "Time"
   }
 }

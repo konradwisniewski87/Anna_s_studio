@@ -337,3 +337,9 @@ body {
     color: #a7727d;
     filter: drop-shadow(0 2px 8px #a7727d22);
 }
+
+.carousel-caption {
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+}
