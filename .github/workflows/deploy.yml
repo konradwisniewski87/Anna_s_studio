@@ -14,32 +14,35 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup .NET SDK 🔧
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '9.0.x'
 
       - name: Install wasm-tools 🛠️
         run: dotnet workload install wasm-tools
+        
+      - name: Set repo name env var
+        run: echo "REPO_NAME=${GITHUB_REPOSITORY##*/}" >> $GITHUB_ENV
 
       - name: Publish Blazor WebAssembly 🔨
         run: |
-          dotnet publish Anna_s_studio/Anna_s_studio.csproj -c Release -o release
+          dotnet publish ${{ env.REPO_NAME }}/${{ env.REPO_NAME }}.csproj -c Release -o release
 
       - name: Fix base href for GitHub Pages
-        run: sed -i 's|<base href="/" />|<base href="/Anna_s_studio/" />|g' release/wwwroot/Anna_s_studio/index.html
+        run: sed -i 's|<base href="/" />|<base href="/${{ env.REPO_NAME }}/" />|g' release/wwwroot/${{ env.REPO_NAME }}/index.html
 
       - name: Copy 404.html & .nojekyll 📄
         run: |
-          cp release/wwwroot/Anna_s_studio/index.html release/wwwroot/Anna_s_studio/404.html
-          touch release/wwwroot/Anna_s_studio/.nojekyll
+          cp release/wwwroot/${{ env.REPO_NAME }}/index.html release/wwwroot/${{ env.REPO_NAME }}/404.html
+          touch release/wwwroot/${{ env.REPO_NAME }}/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: release/wwwroot/Anna_s_studio
+          folder: release/wwwroot/${{ env.REPO_NAME }}
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
