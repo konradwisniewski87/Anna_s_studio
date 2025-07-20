@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Anna_s_studio",
   "resources": {
-    "hash": "sha256-fVgIE9rm/zkbM1eJtRvU+MxhawgthngNKJ3k4ukgl9o=",
+    "hash": "sha256-b4YUQCfigCKlkx+HDEdcJQmFb95zqsEPTm5nJmjlf14=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.heyg9736bh.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Forms.y2kmnnid3e.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -46,7 +46,7 @@
       "System.Web.HttpUtility.a54destebp.wasm": "System.Web.HttpUtility.wasm",
       "System.wznexm8bk2.wasm": "System.wasm",
       "System.Private.CoreLib.onh9s682j1.wasm": "System.Private.CoreLib.wasm",
-      "Anna_s_studio.3vokdsi6yb.wasm": "Anna_s_studio.wasm",
+      "Anna_s_studio.6vc1vy8usp.wasm": "Anna_s_studio.wasm",
       "dotnet.native.fpn4x653o1.js": "dotnet.native.js",
       "dotnet.native.nwslxbdy4k.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -111,7 +111,7 @@
       "System.Threading.acwnquwc9t.wasm": "sha256-hmq7E5RBDuX9WHoN8bZjejvmxHmSFsAk0rO4O+E/LOg=",
       "System.Web.HttpUtility.a54destebp.wasm": "sha256-wpvaCSBT/g/k/8Zx1FtP7sgMZNZPQFnBPwq9llWIZas=",
       "System.wznexm8bk2.wasm": "sha256-/Imz/Enqa2AZc4T3k/CqtsM6674KRN9OUtvK4Nokhew=",
-      "Anna_s_studio.3vokdsi6yb.wasm": "sha256-IYgHCRkYPIDLp/USURnTNCyv4hUUu78cWxyNU1IPuM4="
+      "Anna_s_studio.6vc1vy8usp.wasm": "sha256-nsEmvJYXapHvdPQ+SkhaQg4Ys/PnQrAXlUtXh0Ad5ic="
     }
   },
   "cacheBootResources": true,
