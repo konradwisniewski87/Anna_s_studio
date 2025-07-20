@@ -1,10 +1,11 @@
 ﻿@page "/"
+@using Microsoft.JSInterop
 @inherits LayoutComponentBase
 @inject I18nService I18n
 @implements IDisposable
 
 <div style="max-width: 900px; margin: 0 auto;">
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -72,10 +73,44 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <div class="mt-4 text-center">
+        <p class="description-fancy">@CurrentSlideDescription</p>
+    </div>
 </div>
 
 
 @code {
+    [Inject] private IJSRuntime JsRuntime { get; set; } = default!;
+    private string CurrentSlideDescription = "";
+    private string[] SlideTranslationKeys = new[]
+    {
+        "MasterKobidoUpDescription",
+        "KobidoBodyDescription",
+        "TransBuccalDescription",
+        "AestheticKinesiologyTapingDescription",
+        "FacialAcupunctureDescription",
+        "DeepTissueMassageDescription"
+    };
+
+    [JSInvokable]
+    public void OnCarouselSlideChanged(int index)
+    {
+        if (index >= 0 && index < SlideTranslationKeys.Length)
+        {
+            CurrentSlideDescription = I18n.T(SlideTranslationKeys[index]);
+            InvokeAsync(StateHasChanged);
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            OnCarouselSlideChanged(0);
+            await JsRuntime.InvokeVoidAsync("initCarouselDescription", DotNetObjectReference.Create(this));
+        }
+    }
+
     protected override void OnInitialized()
     {
         I18n.OnChange += StateHasChanged;
