@@ -34,12 +34,13 @@
     margin-bottom: 1.2rem;
 }
 
-.contact-content p, .contact-data p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    word-break: break-word;
-}
+    .contact-content p, .contact-data p {
+        /*    font-family: 'Open Sans', sans-serif;*/
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        word-break: break-word;
+    }
 
 .contact-link {
     color: #ffe9ec;
