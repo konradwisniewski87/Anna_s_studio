@@ -39,10 +39,6 @@ jobs:
           cp release/wwwroot/${{ env.REPO_NAME }}/index.html release/wwwroot/${{ env.REPO_NAME }}/404.html
           touch release/wwwroot/${{ env.REPO_NAME }}/.nojekyll
 
-      # - name: Replace base href for GitHub Pages
-      #   run: |
-      #     sed -i 's|%BASE%|/${{ env.REPO_NAME }}/|g' release/wwwroot/${{ env.REPO_NAME }}/index.html
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
