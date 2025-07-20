@@ -32,7 +32,7 @@ jobs:
           dotnet publish ${{ env.REPO_NAME }}/${{ env.REPO_NAME }}.csproj -c Release -o release
 
       - name: Fix base href for GitHub Pages
-        run: sed -i 's|<base href="/" />|<base href="/${{ env.REPO_NAME }}/" />|g' release/wwwroot/${{ env.REPO_NAME }}/index.html
+        run: sed -i 's|<base href="/" />|<base href="/${{ env.REPO_NAME }}/" />|g' release/wwwroot/${{ env.REPO_NAME }}/
 
       - name: Copy 404.html & .nojekyll 📄
         run: |
