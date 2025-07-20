@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=/Anna_s_studio/" />
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Page not found</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
     <script>
-      var path = window.location.pathname.replace(/^\/Anna_s_studio/, "");
-      window.location.replace('/Anna_s_studio/?redirect=' + encodeURIComponent(path + window.location.search + window.location.hash));
+        setTimeout(function () {
+            var segments = window.location.pathname.split('/');
+            var repoSegment = segments[1] || '';
+            window.location.href = window.location.origin + '/' + repoSegment + '/';
+        }, 3000);
     </script>
-  </head>
-  <body>
-    <h2>Redirecting...</h2>
-    <p>If you are not redirected, <a href="/Anna_s_studio/">click here</a>.</p>
-  </body>
-</html> 
+</head>
+<body>
+    <h1>Page not found</h1>
+    <p>Za chwilê wrócimy do strony g³ównej…</p>
+    <p>Jeœli chcesz, mo¿esz <a href="./">klikn¹æ tutaj</a>.</p>
+</body>
+</html>
