@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/Contact.css" />
     <link rel="stylesheet" href="css/Gallery.css" />
+    <link rel="stylesheet" href="css/Index.css" />
     <link rel="stylesheet" href="css/LoadingContainer.css" />
     <link rel="stylesheet" href="css/Services.css" />
     <link rel="icon" type="image/png" href="images/Logo.png" />
@@ -36,6 +37,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <script>
+        function initCarouselDescription(dotNetHelper) {
+            const carousel = document.getElementById('carouselExampleIndicators');
+            if (!carousel) return;
 
+            carousel.addEventListener('slid.bs.carousel', function (event) {
+                const index = event.to;
+                if (typeof index === 'number') {
+                    dotNetHelper.invokeMethodAsync('OnCarouselSlideChanged', index);
+                }
+            });
+
+            setTimeout(() => {
+                const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
+                carouselInstance.to(0);
+            }, 100);
+        }
+    </script>
 </body>
 </html>

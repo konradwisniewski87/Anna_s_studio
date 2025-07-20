@@ -36,7 +36,14 @@
     "NoServiceSelected": "Nie wybrano usługi. Wróć i wybierz usługę.",
     "Duration": "Czas trwania",
     "Date": "Data",
-    "Time": "Godzina"
+    "Time": "Godzina",
+    "SelectedService": "Opis wybranej usługi",
+    "MasterKobidoUpDescription": "Ekskluzywny zabieg liftingujący łączący techniki Kobido, masaż głęboki i transbuccal. Intensywnie ujędrnia, wygładza zmarszczki i modeluje owal twarzy. Efekt to natychmiastowe odmłodzenie i głęboki relaks – bez skalpela.",
+    "KobidoBodyDescription": "Autorski masaż całego ciała inspirowany japońskim rytuałem Kobido. Głęboko odpręża, przywraca równowagę i pobudza naturalne procesy regeneracyjne. Idealny dla ciała i umysłu – poczuj, jak energia wraca do życia.",
+    "TransBuccalDescription": "Innowacyjny masaż twarzy od wewnątrz jamy ustnej. Skutecznie rozluźnia spięte mięśnie żwaczy, modeluje rysy twarzy i działa liftingująco. Niezastąpiony przy napięciach, stresie i bruksizmie.",
+    "AestheticKinesiologyTapingDescription": "Bezbolesna i skuteczna metoda przedłużenia efektów zabiegów liftingujących. Taśmy kinezjologiczne poprawiają napięcie skóry, redukują obrzęki i wspomagają naturalny drenaż limfatyczny.",
+    "FacialAcupunctureDescription": "Naturalny lifting twarzy poprzez precyzyjne nakłuwanie cienkimi igłami. Akupunktura pobudza krążenie, zwiększa produkcję kolagenu i przywraca skórze młodzieńczy blask – bez chemii.",
+    "DeepTissueMassageDescription": "Silnie terapeutyczny masaż skupiony na głębokich warstwach mięśni i powięzi. Usuwa chroniczne napięcia, poprawia postawę i przyspiesza regenerację. Idealny przy stresie i przeciążeniach."
   },
   "en": {
     "Home": "Home",
@@ -75,6 +82,13 @@
     "NoServiceSelected": "No service selected. Please go back and choose a service.",
     "Duration": "Duration",
     "Date": "Date",
-    "Time": "Time"
+    "Time": "Time",
+    "SelectedService": "Selected Service Description",
+    "MasterKobidoUpDescription": "An exclusive lifting ritual combining Kobido techniques, deep tissue massage and transbuccal therapy. Visibly firms the skin, smooths wrinkles and sculpts the face for a rejuvenated look – no needles or downtime.",
+    "KobidoBodyDescription": "A full-body massage inspired by the Japanese Kobido ritual. Deeply relaxing and energizing, it boosts circulation, relieves tension, and restores harmony in both body and mind. Perfect for total renewal.",
+    "TransBuccalDescription": "Innovative intraoral face massage that works deep on jaw and facial muscles. Releases tension, lifts contours and reduces signs of stress or bruxism. A powerful, natural face sculpting technique.",
+    "AestheticKinesiologyTapingDescription": "A painless and effective way to enhance and prolong lifting effects. Special kinesiology tapes support lymphatic drainage, reduce puffiness and improve skin tone for a fresher, firmer look.",
+    "FacialAcupunctureDescription": "A natural, needle-based facial rejuvenation method. Stimulates microcirculation, boosts collagen and improves skin elasticity – revealing a radiant, youthful glow without chemicals.",
+    "DeepTissueMassageDescription": "A therapeutic massage targeting deep muscle and fascia layers. Ideal for stress, overuse or chronic pain – it releases tension, improves posture and supports faster recovery and mobility."
   }
 }
