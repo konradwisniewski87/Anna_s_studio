@@ -43,7 +43,22 @@
     "TransBuccalDescription": "Innowacyjny masaż twarzy od wewnątrz jamy ustnej. Skutecznie rozluźnia spięte mięśnie żwaczy, modeluje rysy twarzy i działa liftingująco. Niezastąpiony przy napięciach, stresie i bruksizmie.",
     "AestheticKinesiologyTapingDescription": "Bezbolesna i skuteczna metoda przedłużenia efektów zabiegów liftingujących. Taśmy kinezjologiczne poprawiają napięcie skóry, redukują obrzęki i wspomagają naturalny drenaż limfatyczny.",
     "FacialAcupunctureDescription": "Naturalny lifting twarzy poprzez precyzyjne nakłuwanie cienkimi igłami. Akupunktura pobudza krążenie, zwiększa produkcję kolagenu i przywraca skórze młodzieńczy blask – bez chemii.",
-    "DeepTissueMassageDescription": "Silnie terapeutyczny masaż skupiony na głębokich warstwach mięśni i powięzi. Usuwa chroniczne napięcia, poprawia postawę i przyspiesza regenerację. Idealny przy stresie i przeciążeniach."
+    "DeepTissueMassageDescription": "Silnie terapeutyczny masaż skupiony na głębokich warstwach mięśni i powięzi. Usuwa chroniczne napięcia, poprawia postawę i przyspiesza regenerację. Idealny przy stresie i przeciążeniach.",
+    "AboutMe": "O mnie",
+    "AboutMeDesc_Paragraph1": "Cześć, nazywam się Anna Gruszczyńska i z wykształcenia jestem magistrem fizjoterapii. Swoją drogę zawodową rozpoczęłam w klinice rehabilitacyjnej w Polsce, gdzie zdobyłam solidne doświadczenie w pracy z ciałem oraz zrozumienie jego potrzeb i możliwości regeneracji.",
+    "AboutMeDesc_Paragraph2": "Z czasem coraz bardziej fascynowało mnie naturalne podejście do zdrowia i urody – delikatne, ale skuteczne metody, które wspierają ciało w jego własnych procesach. Tak narodziła się moja pasja do masaży estetycznych i terapii twarzy, którą rozwijam do dziś.",
+    "AboutMeDesc_SpecializeTitle": "Specjalizuję się w:",
+    "AboutMeDesc_Specialize1": "✅️ Masażu twarzy Kobido Up oraz Master Kobido Up z masażem transbukalnym (wewnątrzustnym)",
+    "AboutMeDesc_Specialize2": "✅️ KobidoBody – masażach obejmujących:",
+    "AboutMeDesc_Specialize2a": "nogi i pośladki",
+    "AboutMeDesc_Specialize2b": "brzuch i ramiona",
+    "AboutMeDesc_Specialize2c": "piersi",
+    "AboutMeDesc_Specialize3": "✅️ Akupunkturze kosmetologicznej",
+    "AboutMeDesc_Specialize4": "✅️ Terapii „100 punktów młodości” – naturalnym liftingu i regeneracji twarzy",
+    "AboutMeDesc_Specialize5": "✅️ Masażu tkanek głębokich – pracy z głębokimi napięciami mięśniowymi i powięziowymi.",
+    "AboutMeDesc_Paragraph3": "Masażem Kobido zainteresowałam się około cztery lata temu – początkowo praktykowałam go na sobie, obserwując widoczne i trwałe efekty. Brak specjalistów w moim otoczeniu tylko wzmocnił moją decyzję, by rozwijać się w tym kierunku i dzielić się tą wiedzą z innymi.",
+    "AboutMeDesc_Paragraph4": "W pracy łączę wykształcenie medyczne, intuicję i holistyczne podejście do człowieka. Każdy zabieg to dla mnie coś więcej niż technika – to uważność, dotyk z troską i przestrzeń dla regeneracji.",
+    "AboutMeDesc_Paragraph5": "Wierzę, że prawdziwe piękno zaczyna się tam, gdzie ciało i umysł znajdują równowagę."
   },
   "en": {
     "Home": "Home",
@@ -89,6 +104,21 @@
     "TransBuccalDescription": "Innovative intraoral face massage that works deep on jaw and facial muscles. Releases tension, lifts contours and reduces signs of stress or bruxism. A powerful, natural face sculpting technique.",
     "AestheticKinesiologyTapingDescription": "A painless and effective way to enhance and prolong lifting effects. Special kinesiology tapes support lymphatic drainage, reduce puffiness and improve skin tone for a fresher, firmer look.",
     "FacialAcupunctureDescription": "A natural, needle-based facial rejuvenation method. Stimulates microcirculation, boosts collagen and improves skin elasticity – revealing a radiant, youthful glow without chemicals.",
-    "DeepTissueMassageDescription": "A therapeutic massage targeting deep muscle and fascia layers. Ideal for stress, overuse or chronic pain – it releases tension, improves posture and supports faster recovery and mobility."
+    "DeepTissueMassageDescription": "A therapeutic massage targeting deep muscle and fascia layers. Ideal for stress, overuse or chronic pain – it releases tension, improves posture and supports faster recovery and mobility.",
+    "AboutMe": "About me",
+    "AboutMeDesc_Paragraph1": "Hi, my name is Anna Gruszczyńska, and I hold a Master's degree in Physiotherapy. I began my professional journey at a rehabilitation clinic in Poland, where I gained solid experience working with the body and developed a deep understanding of its needs and regenerative capabilities.",
+    "AboutMeDesc_Paragraph2": "Over time, I became increasingly fascinated by a natural approach to health and beauty—gentle yet effective methods that support the body in its own healing processes. This is how my passion for aesthetic massage and facial therapy was born, and it continues to grow to this day.",
+    "AboutMeDesc_SpecializeTitle": "I specialize in:",
+    "AboutMeDesc_Specialize1": "Kobido Up facial massage and Master Kobido Up with intraoral (buccal) massage",
+    "AboutMeDesc_Specialize2": "KobidoBody – massage treatments including:",
+    "AboutMeDesc_Specialize2a": "legs and buttocks",
+    "AboutMeDesc_Specialize2b": "abdomen and arms",
+    "AboutMeDesc_Specialize2c": "breasts",
+    "AboutMeDesc_Specialize3": "Cosmetic acupuncture",
+    "AboutMeDesc_Specialize4": "\"100 Points of Youth\" therapy – a natural facelift and facial regeneration method",
+    "AboutMeDesc_Specialize5": "Deep tissue massage – targeting deep muscular and fascial tension.",
+    "AboutMeDesc_Paragraph3": "I became interested in Kobido massage around four years ago. At first, I practiced it on myself, observing visible and lasting results. The lack of specialists in my area only strengthened my decision to pursue this path and share my knowledge with others.",
+    "AboutMeDesc_Paragraph4": "In my work, I combine medical education, intuition, and a holistic approach to each individual. Every treatment is more than just a technique—it's mindful touch, care, and a space for regeneration.",
+    "AboutMeDesc_Paragraph5": "I believe that true beauty begins where the body and mind find balance."
   }
 }
